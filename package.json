@@ -21,13 +21,20 @@
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.4.1",
     "styled-components": "^5.3.5",
+    "ts-serializable": "^2.0.68",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts -r @cypress/instrument-cra start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "cypress:start:app": "BROWSER=none react-scripts -r @cypress/instrument-cra start",
+    "cypress:start:wait": "start-server-and-test cypress:start:app http://localhost:3000",
+    "cypress:open": "cypress open",
+    "dev": "start-test 3000 cypress:open",
+    "cypress:run": "npm run cypress:start:wait -- \"cypress run\"",
+    "coverage:report": "npx nyc report --reporter text-summary --report-dir coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -49,8 +56,13 @@
     ]
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.10.0",
+    "@cypress/instrument-cra": "^1.4.0",
     "@cypress/react": "^6.0.0",
     "@cypress/webpack-dev-server": "^2.0.0",
-    "cypress": "^10.3.0"
+    "babel-plugin-istanbul": "^6.1.1",
+    "cypress": "^10.3.0",
+    "nyc": "^15.1.0",
+    "start-server-and-test": "^1.14.0"
   }
 }
