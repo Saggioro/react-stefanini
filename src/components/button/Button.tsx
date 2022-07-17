@@ -4,11 +4,12 @@ import { Container } from './Button.styled';
 
 interface IButton extends React.HTMLAttributes<HTMLButtonElement>{
     color?: string;
+    type?: 'submit' | 'button';
 }
 
-const Button:FunctionComponent<IButton> = ({color, children, ...props}:IButton) => {
+const Button:FunctionComponent<IButton> = ({color, type = 'submit', children, ...props}:IButton) => {
     return (
-        <Container color={color}>
+        <Container color={color} type={type}>
             {children}
         </Container>
     );
