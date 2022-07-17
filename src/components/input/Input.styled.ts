@@ -19,3 +19,7 @@ export const Label = styled.label<{ width?: number; height?: number }>`
   font-weight: 600;
   color: ${Colors.primary};
 `;
+
+export const Error = styled.span`
+  color: red;
+`;
