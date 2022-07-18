@@ -12,12 +12,12 @@ const Header: FunctionComponent<IHeader> = ({ ...props }: IHeader) => {
   const user = useAppSelector((state) => state.authReducer.loggedUser);
 
   const getUserFirstName = () => {
+      let firstName = "";
     if (user) {
       const [name] = user.name.split(" ");
-      return name;
-    } else {
-      return "";
-    }
+      firstName = name;
+    } 
+    return firstName;
   };
   return (
     <Container>
