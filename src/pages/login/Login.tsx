@@ -8,11 +8,14 @@ import * as Yup from "yup";
 import * as authActions from "../../store/actions/auth";
 import User from "../../models/User";
 import { useAppDispatch, useAppSelector } from "../../hooks/LocalReduxThunk";
+import { useNavigate } from "react-router-dom";
 interface ILogin {}
 
 const Login: React.FunctionComponent = ({ ...props }: ILogin) => {
+  const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const users = useAppSelector((state) => state.usersReducer.users);
+  const [error, setError] = useState<string>();
   const initialState = { login: "", password: "" };
   const validation = Yup.object().shape({
     login: Yup.string().required(),
@@ -37,18 +40,11 @@ const Login: React.FunctionComponent = ({ ...props }: ILogin) => {
                 throw new Error("Incorrect password!");
               }
               await dispatch(authActions.logIn(userLogging) as any);
+              navigate('/home');
             } catch (e: any) {
-              console.log(e.message);
+              setError(e.message);
             }
-            //   try {
-            //       setLoadingButton(true);
-            //       await dispatch(copyrightRevisionCreationActions.createNewItem(values.slidesDireitosAutorais));
-            //       await saveData(values.slidesDireitosAutorais);
-            //       history.push('/confirmarRevisaoDireitosAutorais');
-            //   } catch (error) {
-            //   } finally {
-            //       setLoadingButton(false);
-            //   }
+
           }}
           validationSchema={validation}
         >
@@ -57,9 +53,7 @@ const Login: React.FunctionComponent = ({ ...props }: ILogin) => {
             errors,
             touched,
             handleChange,
-            handleBlur,
             handleSubmit,
-            setFieldValue,
           }) => (
             <form onSubmit={handleSubmit}>
               <Input
@@ -77,6 +71,9 @@ const Login: React.FunctionComponent = ({ ...props }: ILogin) => {
                 error={touched.password ? errors.password : undefined}
               />
               <Button>Sign in</Button>
+              {error && (
+                <p>{error}</p>
+              )}
             </form>
           )}
         </Formik>
