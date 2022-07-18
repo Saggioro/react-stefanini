@@ -10,7 +10,8 @@ module.exports = {
       "src/**/*.tsx",
       "!src/**/*.spec.tsx",
       "!**/node_modules/**",
-      "!**/vendor/**"
+      "!**/vendor/**",
+      "!src/index.tsx"
   ],
   coverageReporters: ['clover', 'json', 'lcov'],
 };
