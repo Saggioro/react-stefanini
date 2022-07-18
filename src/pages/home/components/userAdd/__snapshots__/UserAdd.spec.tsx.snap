@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserAdd should render correctly 1`] = `
+<div
+  className="sc-jSMfEi cjUZxb"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="sc-gsnTZi crCdMa"
+    >
+      <label
+        className="sc-hKMtZM hlXAcN"
+      >
+        Login
+      </label>
+      <input
+        className="sc-dkzDqf bHWPMi"
+        name="login"
+        onChange={[Function]}
+        type="text"
+        value=""
+      />
+      <span
+        className="sc-eCYdqJ gubPie"
+      />
+    </div>
+    <div
+      className="sc-gsnTZi crCdMa"
+    >
+      <label
+        className="sc-hKMtZM hlXAcN"
+      >
+        Password
+      </label>
+      <input
+        className="sc-dkzDqf bHWPMi"
+        name="password"
+        onChange={[Function]}
+        type="password"
+        value=""
+      />
+      <span
+        className="sc-eCYdqJ gubPie"
+      />
+    </div>
+    <div
+      className="sc-gsnTZi crCdMa"
+    >
+      <label
+        className="sc-hKMtZM hlXAcN"
+      >
+        Confirm password
+      </label>
+      <input
+        className="sc-dkzDqf bHWPMi"
+        name="confirmPassword"
+        onChange={[Function]}
+        type="password"
+        value=""
+      />
+      <span
+        className="sc-eCYdqJ gubPie"
+      />
+    </div>
+    <button
+      className="sc-bczRLJ eVNmrq"
+      type="submit"
+    >
+      Save
+    </button>
+  </form>
+</div>
+`;
