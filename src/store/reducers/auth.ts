@@ -4,11 +4,11 @@ import { AnyAction } from "redux";
 import { LOGOUT, LOGGED_USER } from "../actions/auth";
 
 interface IState {
-  loggedUser: User;
+  loggedUser?: User;
 }
 
 const initialState: IState = {
-  loggedUser: new User(),
+  loggedUser: undefined,
 };
 
 const authenticationReducer = (

@@ -1,3 +1,4 @@
+import { Action } from "redux";
 import User from "./../../models/User";
 
 export const LOGOUT: string = "LOGOUT";
