@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render correctly 1`] = `
+<div
+  className="sc-bczRLJ goEvZo"
+>
+  <label
+    className="sc-dkzDqf hbcVSe"
+  />
+  <input
+    className="sc-gsnTZi flIaCB"
+    name="test"
+    onChange={[Function]}
+    type="text"
+    value="test"
+  />
+  <span
+    className="sc-hKMtZM ftuqSP"
+  />
+</div>
+`;
