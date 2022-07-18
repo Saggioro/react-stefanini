@@ -34,15 +34,9 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "start": "react-scripts -r @cypress/instrument-cra start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "cypress:start:app": "BROWSER=none react-scripts -r @cypress/instrument-cra start",
-    "cypress:start:wait": "start-server-and-test cypress:start:app http://localhost:3000",
-    "cypress:open": "cypress open",
-    "dev": "start-test 3000 cypress:open",
-    "cypress:run": "npm run cypress:start:wait -- \"cypress run\"",
-    "coverage:report": "npx nyc report --reporter text-summary --report-dir coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -80,6 +74,7 @@
     "nyc": "^15.1.0",
     "react-test-renderer": "^18.2.0",
     "start-server-and-test": "^1.14.0",
+    "ts-jest": "^28.0.7",
     "ts-node": "^10.9.1"
   }
 }
