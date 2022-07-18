@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render correctly 1`] = `
+<div
+  className="sc-bczRLJ jhqIRe"
+>
+  <div
+    className="sc-gsnTZi iywiwN"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="sc-dkzDqf kSTTCZ"
+      >
+        <label
+          className="sc-eCYdqJ gTqeOc"
+        >
+          Login
+        </label>
+        <input
+          className="sc-hKMtZM drPumR"
+          name="login"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+        <span
+          className="sc-jSMfEi gelXOA"
+        />
+      </div>
+      <div
+        className="sc-dkzDqf kSTTCZ"
+      >
+        <label
+          className="sc-eCYdqJ gTqeOc"
+        >
+          Password
+        </label>
+        <input
+          className="sc-hKMtZM drPumR"
+          name="password"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+        <span
+          className="sc-jSMfEi gelXOA"
+        />
+      </div>
+      <button
+        className="sc-gKXOVf fjgzkO"
+        type="submit"
+      >
+        Sign in
+      </button>
+    </form>
+  </div>
+</div>
+`;
