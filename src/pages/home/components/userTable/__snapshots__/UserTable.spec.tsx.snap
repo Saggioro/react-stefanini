@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserTable should render correctly 1`] = `
+<div
+  className="sc-eCYdqJ cKldaa"
+>
+  <h2>
+    Users
+  </h2>
+  <div
+    className="sc-bczRLJ goEvZo"
+  >
+    <label
+      className="sc-dkzDqf hbcVSe"
+    >
+      Filter
+    </label>
+    <input
+      className="sc-gsnTZi flIaCB"
+      name="filter"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+    <span
+      className="sc-hKMtZM ftuqSP"
+    />
+  </div>
+  <table
+    className="sc-jSMfEi dPlBUE"
+  >
+    <thead>
+      <tr>
+        <th>
+          Login
+        </th>
+        <th>
+          Password
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          admin teste
+        </td>
+        <td>
+          123
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
