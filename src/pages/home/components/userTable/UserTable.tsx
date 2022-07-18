@@ -2,7 +2,7 @@ import React, { FunctionComponent, useState } from "react";
 import Input from "../../../../components/input/Input";
 import { useAppSelector } from "../../../../hooks/LocalReduxThunk";
 
-import { Container, Table } from "./UserAdd.styled";
+import { Container, Table } from "./UserTable.styled";
 
 interface IUserTable {}
 
