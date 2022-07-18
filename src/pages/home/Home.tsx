@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from 'react';
-import Header from '../../components/header/Header';
 import Page from '../../components/page/Page';
 import UserAdd from './components/userAdd/UserAdd';
 import UserTable from './components/userTable/UserTable';
