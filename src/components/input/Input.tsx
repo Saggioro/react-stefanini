@@ -8,6 +8,7 @@ interface IInput extends React.HTMLAttributes<HTMLInputElement> {
   value: string;
   name: string;
   error?: string;
+  type?: string;
 }
 
 const Input: FunctionComponent<IInput> = ({
@@ -17,12 +18,14 @@ const Input: FunctionComponent<IInput> = ({
   value,
   name,
   error,
+  type,
   ...props
 }: IInput) => {
   return (
     <Container>
       <Label>{label}</Label>
       <InputTag
+        type={type || "text"}
         name={name}
         value={value}
         height={height}
