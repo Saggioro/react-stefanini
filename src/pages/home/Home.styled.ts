@@ -3,9 +3,11 @@ import Colors from "../../enums/Colors";
 
 
 export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
-    background: ${Colors.background};
-    height: 100vh;
     width: 100%;
 `; 
 
