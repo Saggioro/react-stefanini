@@ -51,7 +51,7 @@ test("UserAdd form should reset after adding", async () => {
     fireEvent.click(button);
   });
 
-  expect(inputLogin.value).toBe("");
+  expect((inputLogin as any).value).toBe("");
   expect(screen.queryByText("123")).not.toBeInTheDocument();
 });
 
