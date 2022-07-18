@@ -7,8 +7,16 @@ const sendToAnalytics = (where: string = '', error: any = null) => {
     console.error(where, error);
 };
 
-export const getUser = () => {
+export const setUsers = (users : User[]) => {
     return async (dispatch: any) => {
-
-    };
+        try {
+          dispatch({
+            type: SET_USERS,
+            users: users,
+          });
+        } catch (error) {
+          sendToAnalytics("setUsers", error);
+          throw error;
+        }
+      };
 };
